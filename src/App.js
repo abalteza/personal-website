@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import { AnimatedSwitch } from 'react-router-transition';
 import './App.css';
 
+
 class App extends Component {
   render() {
     return (
@@ -14,11 +15,22 @@ class App extends Component {
         <Router>
         <div>
           <ul className="router">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-          <hr />
+            <li><span> <Link to="/home">Home</Link> </span>
+            <span><Link to="/about">About</Link> </span>
+            <span><Link to="/contact">Contact</Link> </span>
+            </li>
+            </ul>
+
+        {  /*  original
+
+            <ul className="router">
+              <li><Link to="/home">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+            <hr /> */
+          }
+
           <Route exact path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
